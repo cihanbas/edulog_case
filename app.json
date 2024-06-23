@@ -22,6 +22,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/AvenirLTProLight.otf",
+            "./assets/fonts/AvenirLTProMedium.otf",
+            "./assets/fonts/AvenirNextCyr-Bold.ttf"
+          ]
+        }
+      ]
+    ]
   }
 }
