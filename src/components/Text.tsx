@@ -24,5 +24,4 @@ const NativeText: FC<Props> = (props) => {
     </Text>
   );
 };
-
-export default NativeText;
+export { NativeText };

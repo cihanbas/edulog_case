@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     shadowColor: "#000",
+    zIndex: 4,
     paddingHorizontal: 10,
     shadowOffset: {
       width: 0,
