@@ -17,8 +17,6 @@ module.exports = {
         endOfLine: "auto",
       },
     ],
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
     "import/extensions": ["error", "never"],
     "react/prop-types": 0,
     "no-shadow": "off",

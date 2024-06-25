@@ -7,9 +7,11 @@ import WishList from "../screens/WishList/WishListScreen";
 import AuthScreen from "../screens/Account/Auth/AuthScreen";
 import { AntDesign } from "@expo/vector-icons";
 import { SearchScreen } from "src/screens/Search/SearchScreen";
+import { useAppSelector } from "src/store/hooks";
 const Tab = createBottomTabNavigator<TabParamList>();
 
 export const TabNavigator = () => {
+  const { cartLength } = useAppSelector((state) => state.cartSlice);
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
@@ -38,7 +40,7 @@ export const TabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <AntDesign name="shoppingcart" size={24} color={color} />
           ),
-          tabBarBadge: 2,
+          tabBarBadge: cartLength || undefined,
         }}
       />
       <Tab.Screen

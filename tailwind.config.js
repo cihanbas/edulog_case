@@ -5,9 +5,10 @@ module.exports = {
     colors: {
       gray: "rgb(199, 199, 204)",
       white: "#ffffff",
-      "bg-2": "#959595",
+      "bg-2": "#ECECEC",
       primary: "#D0810A",
       error: "#FF2323",
+      gray2: "#ECECEC",
     },
     extend: {},
   },

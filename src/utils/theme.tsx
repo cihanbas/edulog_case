@@ -7,6 +7,10 @@ export const COLORS = {
   text: "#000000",
   border: "rgb(199, 199, 204)",
   notification: "rgb(255, 69, 58)",
+  bg_2: "#ECECEC",
+  black: "#000000",
+
+  gray: "#959595",
 };
 export const padding = {
   app: normalize(20),
