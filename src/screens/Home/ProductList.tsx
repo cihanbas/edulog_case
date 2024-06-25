@@ -1,11 +1,11 @@
 import { AntDesign } from "@expo/vector-icons";
 import { useQuery } from "@tanstack/react-query";
 import { FontFamily } from "assets/fonts/fontFamilyTypes";
+import { Image } from "expo-image";
 import React, { FC, memo } from "react";
 import {
   ActivityIndicator,
   FlatList,
-  ImageBackground,
   ListRenderItem,
   Pressable,
   StyleSheet,
@@ -18,6 +18,7 @@ import { useAppDispatch } from "src/store/hooks";
 import { Product } from "src/types/Product";
 import { width } from "src/utils/constants";
 import { COLORS } from "src/utils/theme";
+
 interface Props {
   categoryName: string;
 }
@@ -33,15 +34,16 @@ const ProductList: FC<Props> = ({ categoryName }) => {
   const renderProduct: ListRenderItem<Product> = ({ item }) => {
     return (
       <View style={styles.item}>
-        <ImageBackground
+        <Image
           source={{ uri: item.image }}
           style={styles.image}
           resizeMode="contain"
+          cachePolicy={"disk"}
         >
           <Pressable style={styles.favContainer}>
             <AntDesign name="hearto" size={24} color={COLORS.notification} />
           </Pressable>
-        </ImageBackground>
+        </Image>
         <View className="my-2">
           <NativeText className="my-2" numberOfLines={2}>
             {item.title}

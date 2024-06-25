@@ -1,13 +1,14 @@
 import React from "react";
 import {
   FlatList,
-  Image,
   ListRenderItem,
   Pressable,
   StyleSheet,
   Text,
   View,
 } from "react-native";
+import { Image } from "expo-image";
+
 import { Header, NativeText } from "src/components";
 import {
   ICartItem,
