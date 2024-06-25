@@ -42,7 +42,7 @@ export const cartSlice = createSlice({
         state.totalPrice -= currentItem.price * currentItem.count!;
         state.cart = state.cart.filter((item) => item.id !== action.payload);
         state.cartLength -= 1;
-        if (state.cart.length == 0) {
+        if (state.cart.length === 0) {
           state.totalPrice = 0;
         }
       }

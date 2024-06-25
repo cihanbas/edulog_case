@@ -18,7 +18,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.cihanbs.edulog_case"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -29,11 +30,21 @@
         {
           "fonts": [
             "./assets/fonts/AvenirLTProLight.otf",
-            "./assets/fonts/AvenirLTProMedium.otf",
-            "./assets/fonts/AvenirNextCyr-Bold.ttf"
+            "./assets/fonts/AvenirLTProMedium.otf"
           ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0f6dfe4e-3d9f-4de6-bdf8-f1ab36264e4d"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/0f6dfe4e-3d9f-4de6-bdf8-f1ab36264e4d"
+    }
   }
 }
