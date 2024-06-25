@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { Text, View } from "react-native";
 
 const AuthScreen = () => {
   return (
@@ -10,5 +10,3 @@ const AuthScreen = () => {
 };
 
 export default AuthScreen;
-
-const styles = StyleSheet.create({});
