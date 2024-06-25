@@ -6,17 +6,28 @@ import { TabParamList } from "./types";
 import WishList from "../screens/WishList/WishListScreen";
 import AuthScreen from "../screens/Account/Auth/AuthScreen";
 import { AntDesign } from "@expo/vector-icons";
+import { SearchScreen } from "src/screens/Search/SearchScreen";
 const Tab = createBottomTabNavigator<TabParamList>();
 
 export const TabNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name="Home"
         component={HomeScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <AntDesign name="home" size={24} color={color} />
+          ),
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={SearchScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="search1" size={24} color={color} />
           ),
         }}
       />
@@ -27,6 +38,7 @@ export const TabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <AntDesign name="shoppingcart" size={24} color={color} />
           ),
+          tabBarBadge: 2,
         }}
       />
       <Tab.Screen
