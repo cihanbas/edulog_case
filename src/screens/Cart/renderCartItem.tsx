@@ -41,7 +41,11 @@ export const RenderCartItem: FC<Props> = ({ item }) => {
       style={styles.container}
       onPress={navigateToDetail}
     >
-      <Image source={{ uri: item.image }} style={styles.image}></Image>
+      <Image
+        source={{ uri: item.image }}
+        style={styles.image}
+        contentFit="contain"
+      ></Image>
       <View className="flex-1 pl-4 justify-between pr-2">
         <View className="flex-row flex-1">
           <NativeText className="flex-1" numberOfLines={3}>
@@ -101,7 +105,6 @@ const styles = StyleSheet.create({
   image: {
     height: 120,
     width: 90,
-    resizeMode: "contain",
   },
   countWrapper: {
     borderRadius: 12,

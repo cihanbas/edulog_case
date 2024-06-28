@@ -43,7 +43,11 @@ export const RenderProduct: FC<Props> = ({ item }) => {
   };
   return (
     <Pressable style={styles.item} onPress={navigateToDetail}>
-      <Image source={{ uri: item.image }} style={styles.image} />
+      <Image
+        source={{ uri: item.image }}
+        style={styles.image}
+        contentFit="contain"
+      />
       <View style={styles.content}>
         <NativeText className="my-2">{item.title}</NativeText>
         <NativeText
@@ -63,7 +67,6 @@ const styles = StyleSheet.create({
   image: {
     height: contentWidth,
     width: contentWidth,
-    resizeMode: "contain",
   },
   item: {
     width: contentWidth,

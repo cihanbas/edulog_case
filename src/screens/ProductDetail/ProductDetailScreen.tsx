@@ -119,10 +119,11 @@ export const ProductDetail: React.FC<
               style={[styles.carouselContainer, { opacity: imageOpacity }]}
             >
               <Image
-                style={{ height: width, width, resizeMode: "contain" }}
+                style={{ height: width, width }}
                 source={{
                   uri: data.image,
                 }}
+                contentFit="contain"
                 cachePolicy="memory-disk"
               />
             </Animated.View>
