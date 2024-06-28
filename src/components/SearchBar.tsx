@@ -22,11 +22,11 @@ const SearchBar: FC<Props> = (props) => {
   const { filterBadge } = useAppSelector((s) => s.searchSlice);
   const isfocused = useIsFocused();
   const navigation = useNavigation<IStackNavigationProps<"ProductDetail">>();
-  useEffect(() => {
-    if (isfocused) {
-      ref.current?.focus();
-    }
-  }, [isfocused]);
+  // useEffect(() => {
+  //   if (isfocused) {
+  //     ref.current?.focus();
+  //   }
+  // }, [isfocused]);
   const navigateToFilter = () => {
     navigation.navigate("Filter");
   };
