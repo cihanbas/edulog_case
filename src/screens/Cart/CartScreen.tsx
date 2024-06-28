@@ -14,7 +14,7 @@ const CartScreen = () => {
   };
   const onComplete = () => {};
   return (
-    <View className="flex-1 bg-gray2">
+    <View style={styles.container}>
       <Header text="Shopping bag" />
       {cart.length > 0 ? (
         <>
@@ -59,5 +59,9 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 20,
     marginBottom: 10,
+  },
+  container: {
+    backgroundColor: "#edf5fc",
+    flex: 1,
   },
 });

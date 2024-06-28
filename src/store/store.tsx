@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import cartSlice from "./features/cart/cartSlice";
+
 import {
   persistStore,
   persistReducer,
@@ -11,12 +11,15 @@ import {
   REGISTER,
 } from "redux-persist";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import searchSlices from "./features/search/searchSlices";
+import cartSlice from "./features/cart/cartSlice";
 const persistConfig = {
-  key: "root",
+  key: "edulog",
   storage: AsyncStorage,
 };
 const rootReducer = combineReducers({
   cartSlice: cartSlice,
+  searchSlice: searchSlices,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = configureStore({

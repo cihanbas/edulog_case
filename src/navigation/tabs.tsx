@@ -1,19 +1,37 @@
+import { AntDesign } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import * as React from "react";
+import { shallowEqual } from "react-redux";
+import { SearchScreen } from "src/screens/Search/SearchScreen";
+import { useAppSelector } from "src/store/hooks";
+import AuthScreen from "../screens/Account/Auth/AuthScreen";
 import CartScreen from "../screens/Cart/CartScreen";
 import HomeScreen from "../screens/Home/HomeScreen";
 import { TabParamList } from "./types";
-import WishList from "../screens/WishList/WishListScreen";
-import AuthScreen from "../screens/Account/Auth/AuthScreen";
-import { AntDesign } from "@expo/vector-icons";
-import { SearchScreen } from "src/screens/Search/SearchScreen";
-import { useAppSelector } from "src/store/hooks";
+import ChartScreen from "src/screens/Chart/ChartScreen";
 const Tab = createBottomTabNavigator<TabParamList>();
 
 export const TabNavigator = () => {
-  const { cartLength } = useAppSelector((state) => state.cartSlice);
+  const { cartLength } = useAppSelector(
+    (state) => state.cartSlice,
+    shallowEqual
+  );
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          shadowOffset: {
+            width: 0,
+            height: 12,
+          },
+          shadowOpacity: 0.58,
+          shadowRadius: 16.0,
+          elevation: 24,
+          backgroundColor: "#fff",
+        },
+      }}
+    >
       <Tab.Screen
         name="Home"
         component={HomeScreen}
@@ -43,21 +61,13 @@ export const TabNavigator = () => {
           tabBarBadge: cartLength || undefined,
         }}
       />
+
       <Tab.Screen
-        name="WishList"
-        component={WishList}
+        name="ChartScreen"
+        component={ChartScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <AntDesign name="hearto" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Account"
-        component={AuthScreen}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <AntDesign name="user" size={24} color={color} />
+            <AntDesign name="linechart" size={24} color={color} />
           ),
         }}
       />

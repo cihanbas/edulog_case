@@ -9,6 +9,7 @@ export const COLORS = {
   notification: "rgb(255, 69, 58)",
   bg_2: "#ECECEC",
   black: "#000000",
+  white: "#ffffff",
 
   gray: "#959595",
 };

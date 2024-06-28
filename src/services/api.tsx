@@ -1,4 +1,4 @@
-import { ProductResponse } from "src/types/Product";
+import { Product, ProductResponse } from "src/types/Product";
 import axios from "./instance";
 
 export const api = {
@@ -9,5 +9,6 @@ export const api = {
     ),
   getProductByCategory: (category: string) =>
     axios.get<ProductResponse>(`products/category/${category}`),
-  productDetail: (productID: string) => axios.get(`products/${productID}`),
+  productDetail: (productID: number) =>
+    axios.get<Product>(`products/${productID}`),
 };
