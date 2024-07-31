@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "538564218878",
+    "project_id": "ders14firebasecihan",
+    "storage_bucket": "ders14firebasecihan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538564218878:android:006c640e19d0560e2efaaf",
+        "android_client_info": {
+          "package_name": "com.cihanbs.edulog_case"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBIzmikDHFwWlTHHumEnMP-wtCyQx7EjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

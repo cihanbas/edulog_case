@@ -12,14 +12,16 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ders12.pushnotification"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.cihanbs.edulog_case"
+      "package": "com.cihanbs.edulog_case",
+      "googleServicesFile": "./android/app/google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -40,9 +42,7 @@
         "projectId": "0f6dfe4e-3d9f-4de6-bdf8-f1ab36264e4d"
       }
     },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "appVersion",
     "updates": {
       "url": "https://u.expo.dev/0f6dfe4e-3d9f-4de6-bdf8-f1ab36264e4d"
     }
